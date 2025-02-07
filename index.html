@@ -3,108 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nikheel Chandrakant Khadakabhavi - Portfolio</title>
+    <meta name="description" content="AI/ML Engineer | MIT Academy of Engineering, Pune">
+    <title>Nikheel Khadakabhavi | AI/ML Engineer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        :root {
+            --primary: #2ecc71;
+            --dark: #2c3e50;
+            --light: #ecf0f1;
+        }
+
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
         }
-        header {
-            background-color: #4CAF50;
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--light);
+            color: var(--dark);
+        }
+
+        /* Header Section */
+        .hero {
+            background: linear-gradient(135deg, var(--dark), #34495e);
             color: white;
-            padding: 20px;
+            padding: 100px 20px;
             text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
         }
-        .profile-photo {
-            width: 150px;
-            height: 150px;
+
+        .profile-img {
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
+            border: 5px solid var(--primary);
             margin: 20px auto;
-            display: block;
-            border: 5px solid white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 40px 0;
+        }
+
+        .skill-card {
+            background: white;
             padding: 20px;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
-        h1, h2 {
-            color: #4CAF50;
+
+        .skill-card:hover {
+            transform: translateY(-5px);
         }
-        .section {
-            margin-bottom: 20px;
+
+        /* Project Showcase */
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
-        .section h2 {
-            border-bottom: 2px solid #4CAF50;
-            padding-bottom: 10px;
-        }
-        .section p {
-            line-height: 1.6;
-        }
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #333;
-            color: white;
-            position: fixed;
-            bottom: 0;
+
+        .project-card img {
             width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate {
+            animation: fadeIn 1s forwards;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero { padding: 60px 20px; }
         }
     </style>
 </head>
 <body>
-
-    <header>
-        <img src="profile.jpg" alt="Profile Photo" class="profile-photo">
+    <!-- Hero Section -->
+    <section class="hero animate">
+        <img src="profile.jpg" alt="Nikheel Khadakabhavi" class="profile-img">
         <h1>Nikheel Chandrakant Khadakabhavi</h1>
+        <p>Artificial Intelligence & Machine Learning Engineer</p>
         <p>MIT Academy of Engineering, Pune</p>
-    </header>
-
-    <div class="container">
-        <div class="section">
-            <h2>About Me</h2>
-            <p>
-                Hello! I am Nikheel Chandrakant Khadakabhavi, a passionate and dedicated student at MIT Academy of Engineering, Pune. 
-                I am pursuing my degree in [Your Branch] and have a keen interest in [Your Interests, e.g., software development, AI, etc.]. 
-                I enjoy solving complex problems and building innovative solutions.
-            </p>
+        <div class="social-links" style="margin-top: 20px;">
+            <a href="https://linkedin.com/in/yourprofile" target="_blank" style="color: white; margin: 0 10px;">
+                <i class="fab fa-linkedin fa-2x"></i>
+            </a>
+            <a href="https://github.com/yourusername" target="_blank" style="color: white; margin: 0 10px;">
+                <i class="fab fa-github fa-2x"></i>
+            </a>
+            <a href="https://kaggle.com/yourprofile" target="_blank" style="color: white; margin: 0 10px;">
+                <i class="fab fa-kaggle fa-2x"></i>
+            </a>
         </div>
+    </section>
 
-        <div class="section">
-            <h2>Skills</h2>
-            <ul>
-                <li>Programming Languages: [e.g., Python, Java, C++]</li>
-                <li>Web Development: [e.g., HTML, CSS, JavaScript]</li>
-                <li>Database Management: [e.g., MySQL, MongoDB]</li>
-                <li>Tools & Technologies: [e.g., Git, Docker, AWS]</li>
-            </ul>
-        </div>
+    <!-- Technical Skills -->
+    <div class="container" style="max-width: 1200px; margin: -80px auto 40px; padding: 0 20px;">
+        <div class="skills-grid">
+            <div class="skill-card animate">
+                <h3><i class="fas fa-brain" style="color: var(--primary);"></i> ML Expertise</h3>
+                <ul>
+                    <li>Deep Learning</li>
+                    <li>Computer Vision</li>
+                    <li>Natural Language Processing</li>
+                </ul>
+            </div>
 
-        <div class="section">
-            <h2>Projects</h2>
-            <ul>
-                <li><strong>Project 1:</strong> [Brief description of your project]</li>
-                <li><strong>Project 2:</strong> [Brief description of your project]</li>
-                <li><strong>Project 3:</strong> [Brief description of your project]</li>
-            </ul>
-        </div>
+            <div class="skill-card animate" style="animation-delay: 0.2s;">
+                <h3><i class="fas fa-code" style="color: var(--primary);"></i> Tech Stack</h3>
+                <ul>
+                    <li>Python (TensorFlow, PyTorch)</li>
+                    <li>R, MATLAB</li>
+                    <li>SQL/NoSQL Databases</li>
+                </ul>
+            </div>
 
-        <div class="section">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn Profile</a></p>
-            <p>GitHub: <a href="https://github.com/yourusername" target="_blank">GitHub Profile</a></p>
+            <div class="skill-card animate" style="animation-delay: 0.4s;">
+                <h3><i class="fas fa-tools" style="color: var(--primary);"></i> Tools</h3>
+                <ul>
+                    <li>Git & Docker</li>
+                    <li>AWS/GCP</li>
+                    <li>Tableau/Power BI</li>
+                </ul>
+            </div>
         </div>
     </div>
 
-    <footer>
-        &copy; 2025 Nikheel Chandrakant Khadakabhavi. All rights reserved.
-    </footer>
+    <!-- Projects Section -->
+    <section style="padding: 40px 20px; background: var(--light);">
+        <div class="container" style="max-width: 1200px; margin: 0 auto;">
+            <h2 style="text-align: center; margin-bottom: 40px;">Featured AI Projects</h2>
+            
+            <div class="project-card animate">
+                <img src="project1.jpg" alt="AI Project">
+                <div style="padding: 20px;">
+                    <h3>Real-time Object Detection System</h3>
+                    <p>YOLOv5 implementation with custom dataset for industrial automation</p>
+                    <a href="#" style="color: var(--primary);">View on GitHub →</a>
+                </div>
+            </div>
 
+            <!-- Add more project cards -->
+        </div>
+    </section>
+
+    <!-- Research Publications -->
+    <section style="padding: 40px 20px; background: white;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto;">
+            <h2 style="text-align: center; margin-bottom: 40px;">Research Papers</h2>
+            <div class="publication animate">
+                <h4>Transformers in Healthcare Analytics</h4>
+                <p>IEEE Conference on AI in Medicine, 2024</p>
+                <a href="#" style="color: var(--primary);">Read Paper →</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Intersection Observer for scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.skill-card, .project-card').forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>
