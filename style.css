@@ -10,10 +10,11 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 /*    background: linear-gradient(-45deg, var(--primary), var(--secondary), var(--tertiary));*/
-/*    background: linear-gradient(45deg, #ff7eb3, #ff758c, #ff6f61, #ff7eb3); #orange*/
+/*    background: linear-gradient(45deg, #ff7eb3, #ff758c, #ff6f61, #ff7eb3); */
 /*    background: linear-gradient(45deg, #6a11cb, #2575fc, #3f5efb, #6a11cb); #blue-purple neon effect*/
 /*    background: linear-gradient(45deg, #ff512f, #f09819, #ff6a00, #ff512f);*/
-    background: linear-gradient(270deg, #ff0066, #ffcc00, #33cc33, #3399ff, #9900cc);
+    background: linear-gradient(270deg, #33cc33, #3399ff, #9900cc);
+/*    background: lightskyblue;*/
     background-size: 300% 300%;
     animation: gradientMove 10s infinite linear;
     color: var(--light);
@@ -55,7 +56,7 @@ body {
     width: 100%;
 /*    margin: 0 auto;*/
 /*    padding: 50px 20px;*/
-    gap: 30px;
+    gap: 60px;
 /*    flex-wrap: wrap;*/
 /*    flex-wrap: wrap;
     text-align: left;*/
@@ -72,7 +73,7 @@ body {
 /* Profile Image Hover Glow */
 .profile-img {
     width: 180px;
-    height: 180px;
+    height: 200px;
     border-radius: 50%;
     border: 5px solid var(--primary);
     margin-buttom: 15px;
@@ -143,7 +144,7 @@ body {
 /* Skills Section */
 .container {
     max-width: 1200px;
-    margin: -80px auto 40px;
+    margin: 0 auto;
     padding: 0 20px;
 }
 
@@ -165,6 +166,37 @@ body {
 .skill-card:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+}
+
+.highlight {
+    color: orange;  /* Change this to any color you like */
+    font-weight: bold;
+}
+
+.scorecard-btn {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.scorecard-btn a {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+/*    background: linear-gradient(45deg, #ff8c00, #ff0080);*/
+    background: skyblue;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.scorecard-btn a:hover {
+    transform: scale(1.1);
+/*    background: linear-gradient(45deg, #ff0080, #ff8c00);*/
+    background: skyblue;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Projects Section */
@@ -201,11 +233,11 @@ body {
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
 }
 
-.container {
+/*.container {
     max-width: 800px;
     margin: 0 auto; /* Center the container */
 }
-
+*/
 .publication {
     background: rgba(255, 255, 255, 0.1);
     padding: 20px;
