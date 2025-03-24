@@ -19,6 +19,7 @@ body {
     animation: gradientMove 10s infinite linear;
     color: var(--light);
     margin: 0;
+    backdrop-filter: blur(80deg);
 }
 
 /* Background Animation */
@@ -260,4 +261,10 @@ body {
     .about-box {
         width: 90%;
     }
+}
+footer {
+    text-align: center;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.6);
+    margin-top: 20px;
 }
