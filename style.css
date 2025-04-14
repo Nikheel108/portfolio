@@ -9,12 +9,6 @@
 /* Animated Gradient Background */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-/*    background: linear-gradient(-45deg, var(--primary), var(--secondary), var(--tertiary));*/
-/*    background: linear-gradient(45deg, #ff7eb3, #ff758c, #ff6f61, #ff7eb3); */
-/*    background: linear-gradient(45deg, #6a11cb, #2575fc, #3f5efb, #6a11cb); #blue-purple neon effect*/
-/*    background: linear-gradient(45deg, #ff512f, #f09819, #ff6a00, #ff512f);*/
-    background: linear-gradient(270deg, #33cc33, #3399ff, #9900cc);
-/*    background: lightskyblue;*/
     background-size: 300% 300%;
     animation: gradientMove 10s infinite linear;
     color: var(--light);
@@ -32,8 +26,21 @@ body {
     position: absolute;
     top: 20px;
     right: 20px;
+    opacity: 0; /* Initially hidden */
+    transform: translateX(-100%); /* Start completely off the left */
+    animation: slideInRight 4s ease-out forwards 0.5s; /* Apply the animation */
+    z-index: 1000;
 }
-
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(-300%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0); /* Move to its final right position */
+    }
+}
 .resume-button {
     display: inline-flex;
     align-items: center;
@@ -59,22 +66,14 @@ body {
 }
 /* Hero Section */
 .hero {
-    /*text-align: center;
-    padding: 100px 20px;
-    background: rgba(0, 0, 0, 0.4);
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-    border-radius: 10px;*/
-    display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-/*    gap: 40px;*/
-/*    flex-wrap: wrap;*/
-/*    text-align: left;*/
     background: rgba(0, 0, 0, 0.4);
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
     border-radius: 10px
     padding: 50px 20px;
+
 }
 
 .hero-container {
@@ -83,12 +82,8 @@ body {
     justify-content: space-between;
     max-width: 1200px;
     width: 100%;
-/*    margin: 0 auto;*/
-/*    padding: 50px 20px;*/
     gap: 60px;
-/*    flex-wrap: wrap;*/
-/*    flex-wrap: wrap;
-    text-align: left;*/
+    animation: slideIn 4s ease-in forwards 0.5s;
 }
 
 .hero-left {
@@ -169,12 +164,22 @@ body {
         box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
     }
 }
-
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 /* Skills Section */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    
 }
 
 .skills-grid {
@@ -272,11 +277,6 @@ body {
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
 }
 
-/*.container {
-    max-width: 800px;
-    margin: 0 auto; /* Center the container */
-}
-*/
 .publication {
     background: rgba(255, 255, 255, 0.1);
     padding: 20px;
@@ -298,6 +298,19 @@ body {
 
     .about-box {
         width: 90%;
+    }
+    .resume-button-container {
+        top: 10px;
+        right: 10px;
+    }
+
+    .resume-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .resume-button i {
+        margin-left: 5px;
     }
 }
 footer {
