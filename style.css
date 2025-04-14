@@ -168,7 +168,17 @@ body {
     transform: scale(1.05);
     box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
 }
-
+.skill {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 1rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+.skill i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
 .highlight {
     color: orange;  /* Change this to any color you like */
     font-weight: bold;
