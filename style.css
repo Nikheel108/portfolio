@@ -9,6 +9,12 @@
 /* Animated Gradient Background */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/*    background: linear-gradient(-45deg, var(--primary), var(--secondary), var(--tertiary));*/
+/*    background: linear-gradient(45deg, #ff7eb3, #ff758c, #ff6f61, #ff7eb3); */
+/*    background: linear-gradient(45deg, #6a11cb, #2575fc, #3f5efb, #6a11cb); #blue-purple neon effect*/
+/*    background: linear-gradient(45deg, #ff512f, #f09819, #ff6a00, #ff512f);*/
+    background: linear-gradient(270deg, #33cc33, #3399ff, #9900cc);
+/*    background: lightskyblue;*/
     background-size: 300% 300%;
     animation: gradientMove 10s infinite linear;
     color: var(--light);
@@ -66,9 +72,18 @@ body {
 }
 /* Hero Section */
 .hero {
+    /*text-align: center;
+    padding: 100px 20px;
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    border-radius: 10px;*/
+    display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+/*    gap: 40px;*/
+/*    flex-wrap: wrap;*/
+/*    text-align: left;*/
     background: rgba(0, 0, 0, 0.4);
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
     border-radius: 10px
@@ -82,7 +97,12 @@ body {
     justify-content: space-between;
     max-width: 1200px;
     width: 100%;
+/*    margin: 0 auto;*/
+/*    padding: 50px 20px;*/
     gap: 60px;
+/*    flex-wrap: wrap;*/
+/*    flex-wrap: wrap;
+    text-align: left;*/
     animation: slideIn 4s ease-in forwards 0.5s;
 }
 
