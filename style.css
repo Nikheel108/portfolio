@@ -1,0 +1,325 @@
+:root {
+    --primary: #ff9a8b;
+    --secondary: #ff6a88;
+    --tertiary: #ff99ac;
+    --dark: #1b1b1b;
+    --light: #ffffff;
+}
+
+/* Animated Gradient Background */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(270deg, #33cc33, #3399ff, #9900cc);
+    background-size: 300% 300%;
+    animation: gradientMove 10s infinite linear;
+    color: var(--light);
+    margin: 0;
+    backdrop-filter: blur(80px); /* Corrected typo: '80deg' to '80px' for blur radius */
+}
+
+/* Background Animation */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Resume Button */
+.resume-button-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    opacity: 0; /* Initially hidden */
+    transform: translateX(-100%); /* Start completely off the left */
+    animation: slideInRight 4s ease-out forwards 0.5s; /* Apply the animation */
+    z-index: 1000;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(-300%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0); /* Move to its final right position */
+    }
+}
+
+.resume-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: #007bff; /* Example button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.resume-button:hover {
+    background-color: #0056b3;
+}
+
+.resume-button i {
+    margin-left: 8px;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 50px 20px;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    gap: 60px;
+    animation: slideIn 4s ease-in forwards 0.5s;
+}
+
+.hero-left {
+    flex: 1;
+    text-align: center;
+}
+
+/* Profile Image Hover Glow */
+.profile-img {
+    width: 180px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid var(--primary);
+    margin-bottom: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.profile-img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+/* Social Icons Hover Effects */
+.social-links a {
+    color: var(--light);
+    margin: 0 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+    transform: scale(1.2);
+    text-shadow: 0px 0px 15px var(--light);
+    color: white;
+}
+
+.hero-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    color: var(--secondary);
+    animation: glow 2s infinite alternate;
+}
+
+.about-box {
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    color: white;
+    animation: glow 2s infinite alternate;
+}
+
+.about-box h2 {
+    margin-bottom: 10px;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    }
+    to {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Skills Section */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px 0;
+}
+
+.skill-card {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.skill-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+}
+
+.skill {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 1rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.skill i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.highlight {
+    color: orange; /* Change this to any color you like */
+    font-weight: bold;
+}
+
+.scorecard-btn {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.scorecard-btn a {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background: skyblue;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.scorecard-btn a:hover {
+    transform: scale(1.1);
+    background: skyblue;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Projects Section */
+.projects {
+    padding: 40px 20px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px 0;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Publications Section */
+.publications {
+    text-align: center; /* Center text */
+    padding: 50px 20px;
+    background: rgba(0, 0, 0, 0.2); /* Light transparent background */
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.publication {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block; /* Ensures it takes the right amount of space */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-left, .hero-right {
+        width: 100%;
+    }
+
+    .about-box {
+        width: 90%;
+    }
+
+    .resume-button-container {
+        top: 10px;
+        right: 10px;
+    }
+
+    .resume-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .resume-button i {
+        margin-left: 5px;
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.6);
+    margin-top: 20px;
+}
